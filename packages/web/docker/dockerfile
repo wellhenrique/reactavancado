@@ -13,6 +13,4 @@ FROM base as development
 ENV NODE_ENV='development'
 ENV REACT_AVANCADO_API=http://localhost:1337/
 
-FROM base as production
-
 RUN yarn build
