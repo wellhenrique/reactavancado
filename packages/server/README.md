@@ -3,7 +3,7 @@
 
 ### run project:
 
-- git clone https://github.com/wellhenrique/reactavancado-api.git
+#### at terminal
 
 - git docker-compose pull
 - git docker-compose up -d

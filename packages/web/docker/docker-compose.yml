@@ -9,7 +9,7 @@ services:
       target: development
     command: yarn start
     ports:
-      - "3011:3000"
+      - "3011:3011"
     volumes:
       - ../src:/usr/src/reactavancado-web/src
       - ../public:/usr/src/reactavancado-web/public
