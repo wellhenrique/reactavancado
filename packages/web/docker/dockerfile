@@ -1,0 +1,18 @@
+FROM node:16.13-alpine as base
+    
+WORKDIR /usr/src/reactavancado-web
+
+COPY package.json yarn.lock tsconfig.json ./
+RUN yarn install
+
+COPY ./src ./src
+COPY ./public ./public
+
+FROM base as development
+
+ENV NODE_ENV='development'
+ENV REACT_AVANCADO_API=http://localhost:1337/
+
+FROM base as production
+
+RUN yarn build

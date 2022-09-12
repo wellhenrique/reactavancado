@@ -1,0 +1,30 @@
+{
+  "name": "reactavancado",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "wellhenrique",
+  "private": true,
+  "license": "MIT",
+  "workspaces": {
+    "nohoist": [
+      "**"
+    ]
+  },
+  "engines": {
+    "node": "16.13"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "packages/server/**/*.{ts,tsx}": [
+      "yarn --cwd ./packages/server lint",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
+  }
+}
