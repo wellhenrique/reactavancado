@@ -5,7 +5,7 @@
 
 #### at terminal
 
-- git docker-compose pull
-- git docker-compose up -d
+- docker-compose pull
+- docker-compose up -d
 
 - access http://localhost:1337/
